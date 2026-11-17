@@ -1,4 +1,5 @@
 {
+  
   "expo": {
     "name": "PlanCerca",
     "slug": "PlanCerca",
@@ -39,4 +40,6 @@
       "reactCompiler": true
     }
   }
+  
 }
+

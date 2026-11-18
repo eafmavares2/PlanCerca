@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import {
     Image,
     PanResponder,
+    SafeAreaView,
     StyleSheet,
     Text,
     TouchableOpacity,

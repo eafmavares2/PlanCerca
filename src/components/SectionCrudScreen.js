@@ -1,16 +1,16 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useState } from 'react';
 import {
-  FlatList,
-  KeyboardAvoidingView,
-  Modal,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
+    FlatList,
+    KeyboardAvoidingView,
+    Modal,
+    Platform,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
 } from 'react-native';
 
 export function SectionCrudScreen({ sectionId, title, subtitle, records, onSaveRecord, onDeleteRecord }) {
@@ -154,10 +154,10 @@ export function SectionCrudScreen({ sectionId, title, subtitle, records, onSaveR
                   ¿Quieres eliminar “{recordToDelete?.title}”? Esta acción no se puede deshacer.
                 </Text>
                 <View style={styles.modalActions}>
-                  <TouchableOpacity style={styles.cancelButton} onPress={closeModal}>
+                  <TouchableOpacity style={styles.cancelButton} onPress={closeModal} accessibilityRole="button">
                     <Text style={styles.cancelButtonText}>Cancelar</Text>
                   </TouchableOpacity>
-                  <TouchableOpacity style={styles.deleteButton} onPress={confirmDelete}>
+                  <TouchableOpacity style={styles.deleteButton} onPress={confirmDelete} accessibilityRole="button">
                     <Text style={styles.primaryButtonText}>Eliminar</Text>
                   </TouchableOpacity>
                 </View>
@@ -207,10 +207,10 @@ export function SectionCrudScreen({ sectionId, title, subtitle, records, onSaveR
                   />
                   {formError ? <Text style={styles.errorText}>{formError}</Text> : null}
                   <View style={styles.modalActions}>
-                    <TouchableOpacity style={styles.cancelButton} onPress={closeModal}>
+                    <TouchableOpacity style={styles.cancelButton} onPress={closeModal} accessibilityRole="button">
                       <Text style={styles.cancelButtonText}>Cancelar</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.saveButton} onPress={saveRecord}>
+                    <TouchableOpacity style={styles.saveButton} onPress={saveRecord} accessibilityRole="button">
                       <Text style={styles.primaryButtonText}>Guardar</Text>
                     </TouchableOpacity>
                   </View>

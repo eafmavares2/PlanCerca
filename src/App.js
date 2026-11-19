@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
@@ -16,34 +15,23 @@ export default function App() {
   return (
     <NavigationContainer>
       <StatusBar style="light" />
-
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {isAuthenticated ? (
           <Stack.Screen name="Home">
             {(props) => (
-              <HomeScreen
-                {...props}
-                onLogout={() => setIsAuthenticated(false)}
-              />
+              <HomeScreen {...props} onLogout={() => setIsAuthenticated(false)} />
             )}
           </Stack.Screen>
         ) : (
           <>
             <Stack.Screen name="Login">
               {(props) => (
-                <LoginScreen
-                  {...props}
-                  onLogin={() => setIsAuthenticated(true)}
-                />
+                <LoginScreen {...props} onLogin={() => setIsAuthenticated(true)} />
               )}
             </Stack.Screen>
-
             <Stack.Screen name="Register">
               {(props) => (
-                <RegisterScreen
-                  {...props}
-                  onLogin={() => setIsAuthenticated(true)}
-                />
+                <RegisterScreen {...props} onLogin={() => setIsAuthenticated(true)} />
               )}
             </Stack.Screen>
           </>
